@@ -9,6 +9,7 @@ class AppColors {
   ];
 
   static Color signUpDarkPurple = Color.fromRGBO(82, 67, 154, 1);
+  static Color signUpLightPurple = Color.fromRGBO(145, 131, 222, 1);
 
   static List<Color> loginPurpleGradient = [
     Color.fromRGBO(229, 178, 202, 1),

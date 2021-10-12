@@ -2,6 +2,7 @@ import 'package:animated_login_with_rocket/config/app_colors.dart';
 import 'package:animated_login_with_rocket/ui_helper/ui_helper.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'components/animated_image.dart';
 
@@ -11,6 +12,7 @@ class SignUpView extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.transparent,
       body: Container(
+        height: getHeight(context),
         decoration: BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topCenter,
@@ -87,6 +89,76 @@ class SignUpView extends StatelessWidget {
                           ),
                         ),
                       ),
+                    ),
+                    verticalSpace(height: 20),
+                    ElevatedButton(
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            AppColors.signUpDarkPurple),
+                        fixedSize: MaterialStateProperty.all(
+                            Size(getWidth(context) * 0.9, 70)),
+                        shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(40))),
+                        elevation: MaterialStateProperty.all(7),
+                      ),
+                      child: Text(
+                        'Create an Account',
+                        style: TextStyle(
+                            fontSize: 17, fontWeight: FontWeight.w400),
+                      ),
+                      onPressed: () {},
+                    ),
+                    verticalSpace(height: 30),
+                    Row(
+                      children: [
+                        Expanded(
+                          child: Container(
+                            decoration: BoxDecoration(
+                                border: Border(
+                                    top: BorderSide(
+                              color: AppColors.white,
+                              width: 1,
+                            ))),
+                          ),
+                        ),
+                        horizontalSpace(width: 20),
+                        Text(
+                          'Or',
+                          style: TextStyle(
+                            color: AppColors.white,
+                            fontSize: 15,
+                          ),
+                        ),
+                        horizontalSpace(width: 20),
+                        Expanded(
+                          child: Container(
+                            decoration: BoxDecoration(
+                                border: Border(
+                                    top: BorderSide(
+                              color: AppColors.white,
+                              width: 1,
+                            ))),
+                          ),
+                        ),
+                      ],
+                    ),
+                    verticalSpace(height: 30),
+                    ElevatedButton(
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            AppColors.signUpLightPurple),
+                        fixedSize: MaterialStateProperty.all(
+                            Size(getWidth(context) * 0.9, 70)),
+                        shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(40))),
+                        elevation: MaterialStateProperty.all(7),
+                      ),
+                      child: Text(
+                        'Log In',
+                        style: TextStyle(
+                            fontSize: 17, fontWeight: FontWeight.w400),
+                      ),
+                      onPressed: () {},
                     ),
                   ],
                 ),
